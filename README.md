@@ -9,7 +9,7 @@ Analizar cómo el clima afecta la demanda de taxis en la ciudad de Nueva York y 
 ## 🏗️ Arquitectura Inicial
 - **Extracción:** Datos de viajes de taxi (NYC TLC) + clima (API Open-Meteo)
 - **Transformación:** Limpieza, feature engineering y combinación de datasets
-- **Carga:** Almacenamiento en PostgreSQL o BigQuery
+- **Carga:** Almacenamiento en PostgreSQL
 - **Orquestación:** Apache Airflow
 - **Visualización:** Dashboard interactivo con Streamlit
 
@@ -31,7 +31,7 @@ data-pipeline-nyc-taxi/
 ```mermaid
 flowchart TD
     A[NYC TLC Data] -->|Descarga| B[Extract: Taxi Trips]
-    A2[OpenWeatherMap API] -->|Llamadas API| B2[Extract: Weather Data]
+    A2[Open-Meteo API] -->|Llamadas API| B2[Extract: Weather Data]
 
     B --> C[Raw Storage: data/raw/]
     B2 --> C
@@ -39,7 +39,7 @@ flowchart TD
     C --> D[Transform: Limpieza + Enriquecimiento]
     D -->|Join clima + viajes| E[Processed Data: data/processed/]
 
-    E --> F[Load: PostgreSQL / BigQuery]
+    E --> F[Load: PostgreSQL]
     F -->|Tablas: trips_fact + weather_dim| G[Data Warehouse]
 
     G --> H[Airflow DAG]
