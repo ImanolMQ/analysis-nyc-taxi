@@ -1,0 +1,26 @@
+# Entornos virtuales
+venv/
+.env/
+__pycache__/
+*.py[cod]
+
+# PyCharm
+.idea/
+*.iml
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
+*.swp
+
+# Archivos de test/output
+*.pytest_cache/
+*.coverage
+htmlcov/
+
+# Archivos de notebooks (opcional)
+.ipynb_checkpoints/
