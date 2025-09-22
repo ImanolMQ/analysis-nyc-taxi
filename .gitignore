@@ -21,6 +21,3 @@ Thumbs.db
 *.pytest_cache/
 *.coverage
 htmlcov/
-
-# Archivos de notebooks (opcional)
-.ipynb_checkpoints/
