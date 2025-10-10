@@ -2,4 +2,11 @@ pandas
 numpy
 requests
 jupyter
+ipykernel
+pyarrow
+fastparquet
+pyspark
+polars
 python-dotenv
+tqdm
+matplotlib
